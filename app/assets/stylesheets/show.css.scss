@@ -6,6 +6,8 @@
 }
 .chat-panel {
   min-height: 200px;
+  max-height: 300px;
+  overflow: auto;
 }
 .fright {
   float: right
