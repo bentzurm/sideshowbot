@@ -1,12 +1,12 @@
 class CreateLinkTitleVote < ActiveRecord::Migration
   def change
-    create_table :link do |t|
+    create_table :links do |t|
       t.string :text
       t.string :url
       t.belongs_to :show
       t.timestamps
     end
-    create_table :title do |t|
+    create_table :titles do |t|
       t.string :text
       t.belongs_to :show
       t.timestamps
