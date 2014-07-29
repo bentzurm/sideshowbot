@@ -1,0 +1,17 @@
+.panel.panel-default
+  .panel-heading 
+    %h3.panel-title
+      LINKS
+      %span.glyphicon.glyphicon-cloud-download.fright#links_md{data: {toggle: 'tooltip', placement: 'left', title: 'Download links (markdown)'}}
+  %ul.list-group
+    %li.list-group-item Link 1
+    %li.list-group-item Link 2
+    %li.list-group-item Link 3
+    %li.list-group-item Link 4
+    %li.list-group-item Link 5
+  .panel-footer
+    .form-inline
+      %input.form-control{type: 'text', placeholder: 'Link description'}
+      %input.form-control{type: 'text', placeholder: 'URL'}
+      %button.btn.btn-primary{type: "button"} 
+        %span.glyphicon.glyphicon-plus

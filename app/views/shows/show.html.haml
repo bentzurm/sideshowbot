@@ -1,10 +1,10 @@
 .container
+  %h1
+    =@show.title
+  %h4
+    =@show.url
   .row
-    .col-xs-12
-      %h1
-        =@show.title
-      %h4
-        =@show.url
+    .col-xs-7
       .panel.panel-default
         .panel-heading 
           %h3.panel-title CHAT
@@ -21,38 +21,7 @@
             %span.input-group-btn
               %button.btn.btn-primary{type: "button"} 
                 %span.glyphicon.glyphicon-comment
-  .row
-    .col-xs-6
-      .panel.panel-default
-        .panel-heading 
-          %h3.panel-title TITLES
-        %ul.list-group
-          %li.list-group-item Title 1
-          %li.list-group-item Title 2
-          %li.list-group-item Title 3
-          %li.list-group-item Title 4
-          %li.list-group-item Title 5
-        .panel-footer
-          .input-group
-            %input.form-control{type: 'text', placeholder: 'Suggest a title'}
-            %span.input-group-btn
-              %button.btn.btn-primary{type: "button"} 
-                %span.glyphicon.glyphicon-plus
-    .col-xs-6
-      .panel.panel-default
-        .panel-heading 
-          %h3.panel-title
-            LINKS
-            %span.glyphicon.glyphicon-cloud-download.fright#links_md{data: {toggle: 'tooltip', placement: 'left', title: 'Download links (markdown)'}}
-        %ul.list-group
-          %li.list-group-item Link 1
-          %li.list-group-item Link 2
-          %li.list-group-item Link 3
-          %li.list-group-item Link 4
-          %li.list-group-item Link 5
-        .panel-footer
-          .form-inline
-            %input.form-control{type: 'text', placeholder: 'Link description'}
-            %input.form-control{type: 'text', placeholder: 'URL'}
-            %button.btn.btn-primary{type: "button"} 
-              %span.glyphicon.glyphicon-plus
+    .col-xs-5
+      = render partial: 'titles', object: @show.titles
+      = render partial: 'links'
+                
